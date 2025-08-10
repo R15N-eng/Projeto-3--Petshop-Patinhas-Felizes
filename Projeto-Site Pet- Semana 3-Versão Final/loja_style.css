@@ -12,11 +12,9 @@ a {
 }
 
 img {
-  width: 100%;
-  max-width: 150px;
+  height: 150px;
   border-radius: 10px;
-  height: auto;
-  display: block;
+  display: flex;
   justify-content: center;
   margin: auto;
 }
@@ -366,3 +364,4 @@ div {
   }
 
 }
+
