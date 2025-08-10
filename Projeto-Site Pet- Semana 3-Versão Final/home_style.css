@@ -241,10 +241,12 @@ footer img:hover {
 
 .box_class3 {
   display: grid;
-  grid-template-columns: 1.5fr 2fr;
+  grid-template-areas: "p button" ;
+  align-items: center;
 }
 
 .box_class3 p {
+  grid-area: p;
   padding-left: 60px;
   font-size: 56px;
   font-family: 'Sansita One';
@@ -255,8 +257,13 @@ footer img:hover {
   background-color: #40A798;
   font-family: 'Sansita One';
   transform: scale(1.6);
-  width: 206px;
+  width: 15vw;
   border: none;
+}
+
+.box_class3 a{
+  grid-area: button;
+  
 }
 
 /* ==========================================
@@ -308,10 +315,17 @@ footer img:hover {
     padding: 1rem;
     width: auto;
   }
-
-  .box_class3 {
-    grid-template-columns: 1fr;
-    text-align: center;
+  
+  .box_class3 p{
+    grid-template-areas: "p button button";
+    font-size: 18px;
+    margin-right: 50px;
+  }
+  
+  .box_class3 button{
+    margin-right: 50px;
+    font-size: 10px;
+    width: 25vw;
   }
 
   .box_class3 p {
@@ -332,6 +346,18 @@ footer img:hover {
   .box_class2,
   .box_class3 {
     font-size: 18px;
+  }
+
+  .box_class3 p{
+    grid-template-areas: "p button button";
+    font-size: 18px;
+    margin-right: 50px;
+  }
+  
+  .box_class3 button{
+    margin-right: 50px;
+    font-size: 10px;
+    width: 25vw;
   }
 
   h1 {
