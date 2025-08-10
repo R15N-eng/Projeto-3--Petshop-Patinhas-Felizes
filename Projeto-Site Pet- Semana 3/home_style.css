@@ -153,9 +153,12 @@ footer img:hover {
   height: 300px;
   background-color: #40A798;
   display: grid;
+  grid-template-areas: " lb img rb ";
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  gap: 30%;
   align-items: center;
   border-radius: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
   text-align: justify;
   font-family: 'Sansita One';
   color: white;
@@ -164,17 +167,18 @@ footer img:hover {
   margin: 30px auto;
 }
 
-.box_class1 div {
-  background-color: #40A798;
+.box_class1 #left_button{
+  grid-area: lb;
 }
 
-.box_class1 h2 {
-  text-align: center;
-  margin: 0;
+.box_class1 #right_button{
+  grid-area: rb;
 }
 
 .box_class1 img {
-  height: 250px;
+  grid-area: img;
+  height: 20vh;
+  width: 20vw;
 }
 
 .box_class1 button {
