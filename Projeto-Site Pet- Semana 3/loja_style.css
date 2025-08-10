@@ -268,6 +268,10 @@ div {
     align-items: center;
   }
 
+  .box_class img{
+    width: 20vw;
+  }
+
   .box > * {
     flex: 0 0 48%;
     box-sizing: border-box;
@@ -319,6 +323,10 @@ div {
   .options,
   .box_class {
     font-size: 18px;
+  }
+
+  .box_class img{
+    width: 35vw;
   }
 
   h1,
