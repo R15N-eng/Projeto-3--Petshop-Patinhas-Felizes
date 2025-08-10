@@ -1,0 +1,385 @@
+/* =========================================================
+   VARIÁVEIS DE CORES E ESTILO GLOBAL
+   ========================================================= */
+:root {
+    --petz-blue: #FF5C00;
+    --petz-light-gray: #f8f9fa;
+    --petz-text-gray: #6c757d;
+    --petz-border-gray: #ced4da;
+    --petz-dark-blue: #40A798;
+    --valid-green: #28a745; /* Cor para validação bem-sucedida */
+    --invalid-red: #dc3545; /* Cor para validação falha */
+}
+
+/* =========================================================
+   ESTILO BASE
+   ========================================================= */
+body {
+    background-color: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #40A798;
+    padding: 0 40px;
+    height: 120px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.titulo {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    line-height: 1.2;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.options {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.secure {
+    font-family: 'Sansita One', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================================================
+   CONTEÚDO GERAL
+   ========================================================= */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================
+   SEÇÃO DO FORMULÁRIO
+   ======================== */
+.form-section {
+    flex: 1;
+    padding: 40px;
+    border-right: 1px solid #ddd;
+}
+
+.form-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Tipo de conta - PF / PJ */
+.account-type {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.account-type label {
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--petz-text-gray);
+    font-weight: 500;
+}
+
+/* Esconde o input padrão */
+.account-type input[type="radio"] {
+    display: none;
+}
+
+/* Círculo antes do label */
+.account-type input[type="radio"] + label:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--petz-border-gray);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Quando selecionado */
+.account-type input[type="radio"]:checked + label:before {
+    border-color: var(--petz-blue);
+    background-color: var(--petz-blue);
+}
+
+/* Campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--petz-border-gray);
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--petz-blue);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Validação dos campos */
+input:valid {
+    border-color: var(--valid-green);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--invalid-red);
+}
+
+/* Inputs de telefone lado a lado */
+.form-group .phone-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group .phone-inputs input {
+    flex: 1;
+}
+
+/* Campos de senha */
+.password-group {
+    display: flex;
+    gap: 20px;
+}
+
+.password-group .form-group {
+    flex: 1;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(20%);
+    cursor: pointer;
+    color: var(--petz-text-gray);
+}
+
+/* Regras de senha */
+.password-rules {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--petz-text-gray);
+}
+
+.password-rules ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.password-rules li {
+    margin-bottom: 5px;
+}
+
+.password-rules li.valid {
+    color: var(--valid-green);
+}
+
+.password-rules li.invalid {
+    color: var(--invalid-red);
+}
+
+/* Termos e condições */
+.terms-conditions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-conditions input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.terms-conditions a {
+    color: var(--petz-blue);
+    text-decoration: none;
+}
+
+/* Botão de envio */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: var(--petz-blue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--petz-dark-blue);
+}
+
+/* =========================================================
+   SEÇÃO DE INFORMAÇÕES LATERAL
+   ========================================================= */
+.info-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #f7f7f7;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--petz-text-gray);
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================================================
+   MEDIA QUERIES
+   ========================================================= */
+
+/* Ajuste para telas até 1024px (tablets e notebooks menores) */
+@media (max-width: 1024px) {
+    .header {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 20px;
+    }
+
+    .menu {
+    gap: 20px;
+    }
+
+    .titulo {
+        font-size: 22px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .form-section {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .info-section {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+/* Ajuste para telas até 600px (celulares) */
+@media (max-width: 600px) {
+        .logo {
+        height: 50px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .options {
+        font-size: 16px;
+    }
+
+    .secure {
+        font-size: 14px;
+    }
+
+    .form-section,
+    .info-section {
+        padding: 20px;
+    }
+
+    .password-group {
+        flex-direction: column;
+    }
+
+    .form-group .phone-inputs {
+        flex-direction: column;
+    }
+
+    .submit-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
