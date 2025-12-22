@@ -51,6 +51,33 @@ O objetivo principal foi consolidar conhecimentos fundamentais de **desenvolvime
 ---
 
 ## 🖼️ Demonstração do Projeto
-A seguir estão imagens do resultado final do projeto, organizadas em **5 linhas com 3 imagens por linha**, ilustrando as principais páginas e funcionalidades desenvolvidas.
+
+### Home
+![Home - Celular](Preview/1_Home_C.jpeg)
+![Home - PC](Preview/1_Home_PC.jpeg)
+![Home - Tablet](Preview/1_Home_T.jpeg)
+
+### Login
+![Login - Celular](Preview/2_Login_C.jpeg)
+![Login - PC](Preview/2_Login_PC.jpeg)
+![Login - Tablet](Preview/2_Login_T.jpeg)
+
+### Cadastro
+![Cadastro - Celular](Preview/3_Cadastro_C.jpeg)
+![Cadastro - PC](Preview/3_Cadastro_PC.jpeg)
+![Cadastro - Tablet](Preview/3_Cadastro_T.jpeg)
+
+### Loja
+![Loja - Celular](Preview/4_Loja_C.jpeg)
+![Loja - PC](Preview/4_Loja_PC.jpeg)
+![Loja - Tablet](Preview/4_Loja_T.jpeg)
+
+### Serviços
+![Serviços - Celular](Preview/5_Serviços_C.jpeg)
+![Serviços - PC](Preview/5_Serviços_PC.jpeg)
+![Serviços - Tablet](Preview/5_Serviços_T.jpeg)
+
+> As imagens acima representam o resultado visual e funcional do projeto em diferentes dispositivos ao final da capacitação.
+
 
 
